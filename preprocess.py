@@ -13,7 +13,7 @@ def cleantext(file):
        no_punct = no_punct + char 
 
  userstring = no_punct.split(" ") #retrieving the words
- return userstring #return just the words without any punctuations
+ return userstring #return the list of words without any punctuations
 
 
 def stemm(token_words):
@@ -22,7 +22,7 @@ def stemm(token_words):
     exceptions=['ഇതെല്ലാം']
     index_nos=[]
     
-    v.writelines(["%s\n" % item  for item in token_words])
+    v.writelines(["%s\n" % item  for item in token_words]) #writing all the splitted words to a file temp_file.txt 
     v.close()
     u = open("temp_file.txt", "r")
     sentence=u.readlines()

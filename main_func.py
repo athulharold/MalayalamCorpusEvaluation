@@ -12,9 +12,9 @@ def main():
 #    Reading Standard answer key and converts into vector form
     
     standardans = open("./txtData/standardans","r") #specify correct path
-    std=cleantext(standardans)
+    std=cleantext(standardans) #This will remove all puctuations from the answer and return each word of the paragraph as a list
        
-    std=sandhi_split(std)
+    std=sandhi_split(std) 
     std=stemm(std)
 
     
